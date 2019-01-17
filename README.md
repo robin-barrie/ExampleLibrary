@@ -1,4 +1,4 @@
-# 2019 Deep Space Code
+# Example/Template Library
 
 ## Naming Conventions
 
