@@ -7,9 +7,11 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import frc.robot.subsystems.LED;
+import frc.robot.subsystems.Lift2018;
 import frc.robot.subsystems.Shifter;
 import frc.robot.subsystems.Vision;
 import frc.robot.subsystems.Chassis;
+import frc.robot.subsystems.*;
 
 
 /**
@@ -22,12 +24,16 @@ import frc.robot.subsystems.Chassis;
 public class Robot extends TimedRobot {
 
   // DECLARATIONS
-  public static OI oi;
+
   public static LED LED;
   public static Shifter Shifter;
   public static Vision Vision;
   public static Chassis Chassis;
 
+  public static Lift2018 Lift2018;
+  public static Trolley2018 Trolley2018;
+
+  public static OI oi;
 
   Command  autonomousCommand;
   SendableChooser<Command>  chooser = new SendableChooser<>();
@@ -40,12 +46,15 @@ public class Robot extends TimedRobot {
   public void robotInit() {
 
     // CONSTRUCTORS
-     oi = new OI();
 
      Chassis = new Chassis();
      LED = new LED();
      Shifter = new Shifter();
      Vision = new Vision();
+     Lift2018 = new Lift2018();
+     Trolley2018 = new Trolley2018();
+
+     oi = new OI();                       //PUT THIS LAST, ALWAYS!!!!
 
 
     // chooser.addOption("My Auto", new MyAutoCommand());

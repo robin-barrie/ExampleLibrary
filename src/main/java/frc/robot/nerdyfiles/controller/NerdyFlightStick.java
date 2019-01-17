@@ -12,17 +12,6 @@ public class NerdyFlightStick extends Joystick {
         super(port);
     }
 
-	/*
-		AXIS:
-		#	Description		Direction   			Positive
-		--	---------------	---------------------	--------
-		0	Joystick tilt	Right/Left				Right
-		1	Joystick tilt	Forward/back			Back (negated in this class getter)
-		2	Throttle tilt	Forward/Back			Back (negated in this class getter)
-		3	Joystick rotate	Right/Left (Rotation)	Right
-		4	Throttle rocker	Right/Left (Rocker)		Right
-	 */
-
 	public JoystickButton			RightTrigger				= new JoystickButton(this, 1);	//The digital trigger on the back of the joystick
 	public JoystickButton			StripedButton				= new JoystickButton(this, 2);	//The orange and black striped button on joystick
 	public JoystickButton			RightKnuckleButton			= new JoystickButton(this, 3);	//The button on the top-right of the joytstick
@@ -47,6 +36,16 @@ public class NerdyFlightStick extends Joystick {
 	public JoystickPOVButton		povLeft			            = new JoystickPOVButton(this, 270);
 	public JoystickPOVButton		povUpLeft		        	= new JoystickPOVButton(this, 315);
 
+		/*
+		AXIS:
+		#	Description		Direction   			Positive
+		--	---------------	---------------------	--------
+		0	Joystick tilt	Right/Left				Right
+		1	Joystick tilt	Forward/back			Back (negated in this class getter)
+		2	Throttle tilt	Forward/Back			Back (negated in this class getter)
+		3	Joystick rotate	Right/Left (Rotation)	Right
+		4	Throttle rocker	Right/Left (Rocker)		Right
+	    */
 
     public double getStickY() {
         return this.getRawAxis(0);

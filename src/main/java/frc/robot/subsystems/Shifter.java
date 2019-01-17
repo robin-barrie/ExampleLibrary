@@ -1,6 +1,7 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.commands.Shifter.*;
 import edu.wpi.first.wpilibj.Solenoid;
 
 /**
@@ -26,7 +27,7 @@ public class Shifter extends Subsystem {
   // Set the default command for a subsystem here.
   @Override
   public void initDefaultCommand() {
-    //setDefaultCommand(new shifterHighGear());
+  setDefaultCommand(new shifterLowGear());
   }
 
   /**
